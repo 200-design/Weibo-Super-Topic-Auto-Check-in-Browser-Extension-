@@ -8,18 +8,18 @@ A Chrome / Edge extension that automatically checks in to all the Weibo Super To
 
 ## Features
 
-- 🔍 **Auto-discovers your topics**: fetches the full list of Super Topics you follow (with pagination) — no manual list to maintain
-- ✅ **One-click check-in**: iterates through all topics with a random 3–8s delay between requests (human-like behavior)
-- ⏰ **Daily schedule**: set a time and it runs automatically every day
-- 🔄 **Catch-up runs**: browser was closed at the scheduled time? It catches up on next launch (already-checked topics are skipped, so re-runs are harmless)
-- 📊 **At-a-glance results**: badge on the extension icon (green number = done, red ! = failures), with a detailed per-topic table in the popup
-- 🌐 **Bilingual UI**: Simplified / Traditional Chinese, auto-detected and switchable
+- **Auto-discovers your topics**: fetches the full list of Super Topics you follow (with pagination) — no manual list to maintain
+-**One-click check-in**: iterates through all topics with a random 3–8s delay between requests (human-like behavior)
+- **Daily schedule**: set a time and it runs automatically every day
+- **Catch-up runs**: browser was closed at the scheduled time? It catches up on next launch (already-checked topics are skipped, so re-runs are harmless)
+- **At-a-glance results**: badge on the extension icon (green number = done, red ! = failures), with a detailed per-topic table in the popup
+- **Bilingual UI**: Simplified / Traditional Chinese, auto-detected and switchable
 
 ## Install
 
 ### From the store (recommended)
 
-> 🚧 Edge Add-ons listing is under review; link coming soon
+> Edge Add-ons listing is under review; link coming soon
 
 ### Manual (load unpacked)
 
