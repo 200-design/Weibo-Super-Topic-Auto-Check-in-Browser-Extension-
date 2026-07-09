@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 420px; font-family: system-ui, sans-serif; font-size: 13px; margin: 12px; }
+    h1 { font-size: 15px; margin: 0 0 4px; }
+    p.hint { color: #666; margin: 0 0 10px; }
+    button { display: block; width: 100%; margin: 4px 0; padding: 7px; cursor: pointer; }
+    button:disabled { cursor: wait; opacity: 0.6; }
+    #runAll { font-weight: bold; }
+    #out {
+      margin-top: 10px; padding: 8px; background: #f4f4f4; border: 1px solid #ddd;
+      white-space: pre-wrap; word-break: break-all; min-height: 60px; max-height: 320px;
+      overflow-y: auto; font-family: Consolas, monospace; font-size: 12px;
+    }
+    .row { display: flex; gap: 6px; margin-top: 6px; }
+    .row button { margin: 0; }
+  </style>
+</head>
+<body>
+  <h1>M0 技術驗證</h1>
+  <p class="hint">請先確認你已在瀏覽器登入微博，再依序點按鈕。</p>
+
+  <button id="runAll">▶ 全部執行（依序跑 4 項測試）</button>
+  <button data-route="A" data-method="sw">測試 1：手機版 API × 背景直發</button>
+  <button data-route="B" data-method="sw">測試 2：電腦版 API × 背景直發</button>
+  <button data-route="A" data-method="inject">測試 3：手機版 API × 注入頁面</button>
+  <button data-route="B" data-method="inject">測試 4：電腦版 API × 注入頁面</button>
+  <button data-route="inspectA" data-method="sw" data-solo="1">測試 5：檢視卡片結構（診斷用）</button>
+  <button data-route="checkinA2" data-method="sw" data-solo="1">測試 6：手機版簽到端點直測</button>
+
+  <div id="out">（結果會顯示在這裡）</div>
+  <div class="row">
+    <button id="copy">複製全部結果</button>
+    <button id="clear">清空</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

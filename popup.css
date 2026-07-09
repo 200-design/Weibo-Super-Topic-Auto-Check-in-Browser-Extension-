@@ -1,0 +1,132 @@
+body {
+  width: 380px;
+  margin: 0;
+  padding: 14px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: #222;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.lang-toggle button {
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.lang-toggle button.active {
+  background: #e6162d;
+  border-color: #e6162d;
+  color: #fff;
+}
+.lang-toggle button:first-child { border-radius: 4px 0 0 4px; }
+.lang-toggle button:last-child { border-radius: 0 4px 4px 0; margin-left: -1px; }
+
+.status {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f4f4f4;
+  margin-bottom: 8px;
+}
+.status.ok { background: #edf7ed; color: #1d642a; }
+.status.warn { background: #fdf0ef; color: #9c1c13; }
+
+button.primary {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: #e6162d;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 4px 0 10px;
+}
+button.primary:disabled { background: #d8888f; cursor: wait; }
+
+button.secondary {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid #e6162d;
+  color: #e6162d;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.daily {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+.daily label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.daily input[type="time"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 13px;
+}
+.hint {
+  color: #888;
+  font-size: 12px;
+  margin: 4px 0 10px;
+  min-height: 14px;
+}
+
+.progress { margin-bottom: 10px; }
+.bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.bar-fill {
+  height: 100%;
+  width: 0;
+  background: #e6162d;
+  transition: width 0.3s;
+}
+#progressText { color: #555; }
+
+.summary { color: #444; margin-bottom: 8px; min-height: 16px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+th, td {
+  text-align: left;
+  padding: 4px 6px;
+  border-bottom: 1px solid #eee;
+  word-break: break-all;
+}
+th { color: #888; font-weight: normal; }

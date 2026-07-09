@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1 id="appTitle">微博超话自动签到</h1>
+    <div class="lang-toggle">
+      <button id="langCN" data-lang="zh-CN">简</button>
+      <button id="langTW" data-lang="zh-TW">繁</button>
+    </div>
+  </header>
+
+  <div id="loginStatus" class="status">…</div>
+  <button id="openLogin" class="secondary" hidden>打开微博登录页</button>
+
+  <button id="signNow" class="primary">立即签到</button>
+
+  <div class="daily">
+    <label>
+      <input type="checkbox" id="enableDaily">
+      <span id="enableDailyLabel">每天自动签到</span>
+    </label>
+    <input type="time" id="dailyTime" value="09:00">
+  </div>
+  <div id="dailyHint" class="hint"></div>
+
+  <div id="progress" class="progress" hidden>
+    <div class="bar"><div id="progressBar" class="bar-fill"></div></div>
+    <div id="progressText"></div>
+  </div>
+
+  <div id="summary" class="summary"></div>
+
+  <table id="resultTable" hidden>
+    <thead>
+      <tr><th id="colTopic"></th><th id="colStatus"></th><th id="colMsg"></th></tr>
+    </thead>
+    <tbody id="resultBody"></tbody>
+  </table>
+
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

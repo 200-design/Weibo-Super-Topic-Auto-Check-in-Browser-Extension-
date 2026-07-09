@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "微博超话自动签到",
+  "version": "0.1.0",
+  "description": "自动签到你关注的所有微博超话（数据仅存本地）/ 自動簽到你關注的所有微博超話（資料僅存本地）",
+  "permissions": ["storage", "alarms", "scripting", "tabs"],
+  "host_permissions": [
+    "https://m.weibo.cn/*",
+    "https://passport.weibo.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "微博超话自动签到",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

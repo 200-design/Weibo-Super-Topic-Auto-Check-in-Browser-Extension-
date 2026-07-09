@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "微博超話簽到 M0 技術驗證",
+  "version": "0.0.1",
+  "description": "丟棄式測試殼：驗證擴充功能發出的請求能否攜帶微博登入 Cookie",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": [
+    "https://m.weibo.cn/*",
+    "https://weibo.com/*",
+    "https://passport.weibo.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "M0 技術驗證"
+  }
+}
