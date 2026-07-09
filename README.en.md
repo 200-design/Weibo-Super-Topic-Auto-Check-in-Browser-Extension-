@@ -23,7 +23,7 @@ A Chrome / Edge extension that automatically checks in to all the Weibo Super To
 
 ### Manual (load unpacked)
 
-1. Download and unzip this repository
+1. [Download](https://github.com/200-design/Weibo-Super-Topic-Auto-Check-in-Browser-Extension-/archive/refs/heads/main.zip) and unzip this repository
 2. Open `chrome://extensions` (or `edge://extensions`)
 3. Enable **Developer mode**
 4. Click **Load unpacked** and select the unzipped folder
