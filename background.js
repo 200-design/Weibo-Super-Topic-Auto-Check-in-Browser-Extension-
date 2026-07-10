@@ -113,12 +113,19 @@ async function runCheckinAll() {
 
     setState({ phase: "sign", total: topics.length, done: details.length });
 
+    let st = login.st; // st 會在流程中被伺服器輪換，驗簽失敗時需重取
     for (let i = 0; i < toSign.length; i++) {
       const topic = toSign[i];
       setState({ current: topic.name });
       let record;
       try {
-        record = await checkinTopic(tab.id, topic, login.st);
+        record = await checkinTopic(tab.id, topic, st);
+        if (record.status === "failed" && record.message.includes("验签")) {
+          await sleep(1000);
+          const fresh = await getLoginState(tab.id);
+          if (fresh.st) st = fresh.st;
+          record = await checkinTopic(tab.id, topic, st);
+        }
       } catch (e) {
         record = { name: topic.name, status: "failed", message: e.message };
       }
